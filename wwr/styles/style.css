@@ -73,18 +73,19 @@ article.client-testimonial {
 }
 
 .happy-client-img {
-    width: 150px;
-    height: auto;
+    width: 100px; /* Set a smaller width */
+    height: auto; /* Maintain aspect ratio */
     border: 1px solid steelblue;
     padding: 2px;
     box-shadow: 0 0 30px gray;
-    float: right;
-    margin: 0 0 1rem 1rem;
+    float: left; /* Float image to the left */
+    margin: 0 1rem 1rem 0; /* Adjust margin for spacing */
 }
 
 .client-testimonial div {
     flex: 1; /* Allow text to take remaining space */
 }
+
 
 footer {
     background-color: var(--secondary-color);
