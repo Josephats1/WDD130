@@ -1,131 +1,143 @@
 :root {
-    --primary-color: #3498db; /* Blue */
-    --secondary-color: #2ecc71; /* Green */
-    --accent1-color: #e74c3c; /* Red */
-    --accent2-color: #f39c12; /* Orange */
+    --main-bg-color: #f4f4f4;
+    --header-bg-color: #007bff;
+    --footer-bg-color: #007bff;
+    --text-color: #333;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
     margin: 0;
-    padding: 0;
 }
 
 header {
-    display: grid;
-    grid-template-columns: auto 1fr; /* Logo on the left, nav on the right */
+    background: var(--header-bg-color);
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1em;
 }
 
 .logo {
-    max-width: 150px; 
-    height: auto;
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end; /* Align nav items to the right */
+    width: 150px;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     margin: 0 15px;
 }
 
 nav a:hover {
     text-decoration: underline;
-    color: var(--accent1-color);
 }
 
 .hero {
     position: relative;
-    display: flex;
+    text-align: center;
 }
 
 .hero-img {
-    width: 100%; /* Full width */
+    width: 100%;
     height: auto;
 }
 
-h1 {
+.hero h1 {
     position: absolute;
-    top: 15%;
-    right: 5%; 
-    font-family: 'Merriweather', serif; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    font-size: 2em; /* Responsive font size */
+    font-size: 2.5rem;
 }
 
-article.client-testimonial {
+.client-testimonial {
     display: flex;
-    align-items: flex-start; /* Align image and text to the top */
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 1em;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
     border-radius: 5px;
-    margin: 1em 0; /* Top and bottom margin */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.happy-client-img {
-    width: 100px; /* Minimized size */
+.client-testimonial img {
+    width: 100px;
     height: auto;
-    border: 1px solid steelblue;
-    margin-right: 1rem; /* Space between image and text */
+    margin-left: 20px; /* Adjusted to move image to left */
+}
+
+.client-testimonial > div {
+    flex: 1;
 }
 
 .history, .adventure {
-    margin: 2em 0; /* More space between sections */
-}
-
-footer {
-    background-color: var(--secondary-color);
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
-.sociallinks img {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-}
-
-.sociallinks a {
-    text-decoration: none;
-}
-
-.sociallinks a:hover img {
-    transform: scale(1.1); 
-    transition: transform 0.2s; 
+    margin: 40px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .rafting-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-    margin: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rafting-images figure {
+    flex: 1 1 calc(20% - 10px);
+    margin: 5px;
+    text-align: center;
 }
 
 .rafting-images img {
-    width: 100%; 
+    width: 100%;
     height: auto;
-    border-radius: 5px; 
+}
+
+footer {
+    background: var(--footer-bg-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .sociallinks {
+    margin-top: 10px;
+}
+
+footer .sociallinks a {
+    margin: 0 10px;
+    text-decoration: none; /* Ensure no text-decoration on icons */
+}
+
+footer .sociallinks img {
+    width: 30px;
+    height: 30px;
 }
 
 @media (max-width: 768px) {
-    .hero-img {
-        width: 100%; /* Adjust for smaller screens */
+    .header-content {
+        flex-direction: column;
     }
 
-    h1 {
-        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    nav a {
+        margin: 10px 0;
     }
 
-    .happy-client-img {
-        width: 60px; /* Adjust client image size for smaller screens */
+    .rafting-images figure {
+        flex: 1 1 calc(50% - 10px);
     }
 }
