@@ -3,6 +3,7 @@
     --header-bg-color: #007bff;
     --footer-bg-color: #007bff;
     --text-color: #333;
+    --hover-color: deeppink; /* Hover color variable */
 }
 
 body {
@@ -28,17 +29,19 @@ header {
 }
 
 .logo {
-    width: 150px;
+    width: 120px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 15px;
+    transition: color 0.3s; /* Smooth transition for hover */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: var(--hover-color);
+    text-decoration: underline; /* Optional */
 }
 
 .hero {
@@ -56,7 +59,8 @@ nav a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--hover-color);
+    font-family: 'Brush Script MT', sans-serif;
     font-size: 2.5rem;
 }
 
@@ -69,13 +73,13 @@ nav a:hover {
     background: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .client-testimonial img {
-    width: 100px;
+    max-width: 180px; /* Ensures image doesn't overflow */
     height: auto;
-    margin-left: 20px; /* Adjusted to move image to left */
+    margin-left: 20px;
 }
 
 .client-testimonial > div {
@@ -87,7 +91,7 @@ nav a:hover {
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .rafting-images {
@@ -105,12 +109,13 @@ nav a:hover {
 .rafting-images img {
     width: 100%;
     height: auto;
+    border-radius: 5px; /* Optional: adds rounding to images */
 }
 
 footer {
     background: var(--footer-bg-color);
     color: #fff;
-    text-align: center;
+    text-align: left;
     padding: 20px 0;
 }
 
@@ -135,6 +140,10 @@ footer .sociallinks img {
 
     nav a {
         margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Adjust size for mobile */
     }
 
     .rafting-images figure {
