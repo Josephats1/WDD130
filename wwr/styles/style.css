@@ -47,46 +47,90 @@ nav a:hover {
 .hero {
     position: relative;
     text-align: center;
+    color: deeppink;
 }
 
 .hero-img {
     width: 100%;
     height: auto;
+    opacity: 0.8;
 }
 
 .hero h1 {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: deeppink;
-    font-family: 'Brush Script MT', sans-serif;
     font-size: 2.5rem;
 }
 
-.client-testimonial {
+.hero p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+}
+
+.client-testimonials {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    background-color: azure;
+    padding: 0em;
+    
+}
+
+.testimonial-card {
+    display: 80%;
+    align-items: center;
+    background-color: azure;
+    border-radius: 50%;
+}
+
+.testimonial-text {
+    flex: 1;
+    margin-left: 1rem;
+    color: rgb(9, 11, 128);
+   
+}
+
+.testimonial-img {
+    width: 300px; /* Adjust size as necessary */
+    height: auto;
+   border: none;
+   margin-right: 5px;
+}
+
+.history {
+    padding: 2rem;
+}
+
+.history-content {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.client-testimonial img {
-    max-width: 180px; /* Ensures image doesn't overflow */
-    height: auto;
-    margin-left: 20px;
+.history-text {
+    width: 45%;
 }
 
-.client-testimonial > div {
-    flex: 1;
+.history-img {
+    width: 30%; /* Reduced size */
+    margin: 0 20px; /* Spacing around the image */
 }
 
-.history, .adventure {
+.left {
+    text-align: right;
+}
+
+.right {
+    text-align: left;
+}
+
+.adventure {
     margin: 40px 0;
     padding: 20px;
     background: #fff;
@@ -95,32 +139,29 @@ nav a:hover {
 }
 
 .rafting-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the images */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
 .rafting-images figure {
-    flex: 1 1 calc(20% - 15px);
-    margin: 5px;
-    text-align: center;
-}
-
-.rafting-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px; /* Optional: adds rounding to images */
+    margin: 1rem; /* Space between images */
+    text-align: center; /* Center the caption */
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
 }
 
 footer {
     background: var(--footer-bg-color);
     color: #fff;
-    text-align: left;
+    text-align: right; /* Align text to the right */
     padding: 20px 0;
 }
 
 footer .sociallinks {
     margin-top: 10px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align icons to the right */
 }
 
 footer .sociallinks a {
@@ -136,6 +177,7 @@ footer .sociallinks img {
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
+       
     }
 
     nav a {
@@ -147,6 +189,5 @@ footer .sociallinks img {
     }
 
     .rafting-images figure {
-        flex: 1 1 calc(100% - 20px);
+        flex: 1 1 calc(100% - 20px); /* Adjust for smaller screens */
     }
-}
