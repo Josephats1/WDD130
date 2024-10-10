@@ -140,19 +140,20 @@ nav a:hover {
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
 .rafting-images {
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center the images */
-    flex-wrap: nowrap; /* Prevent wrapping */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    display: flex; /* Aligns the images horizontally */
+    gap: 2px; /* Space between images */
+    overflow: hidden; /* Prevents overflow */
+    justify-content: space-between; /* Distributes space evenly */
 }
 
-.rafting-images figure {
-    margin: 1rem; /* Space between images */
-    text-align: center; /* Center the caption */
-    flex: 0 0 auto; /* Prevent flex items from shrinking */
+.rafting-images img {
+    flex: 1; /* Allows the images to grow */
+    min-width: 200px; /* Set a minimum width for the images */
+    max-width: 50%; /* Makes sure images do not exceed 25% of the container */
+    height: auto; /* Maintain aspect ratio */
 }
+
 
 footer {
     background: var(--footer-bg-color);
