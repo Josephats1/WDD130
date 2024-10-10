@@ -101,7 +101,10 @@ nav a:hover {
     width: 300px; /* Adjust size as necessary */
     height: auto;
    border: none;
-   margin-right: 5px;
+   margin-top: 3px;
+   margin-left: 30;
+   margin-bottom: 3px;
+
 }
 
 .history {
